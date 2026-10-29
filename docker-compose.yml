@@ -1,0 +1,13 @@
+services:
+  eclair:
+    build: .
+    restart: unless-stopped
+    volumes:
+      - eclair-data:/var/www/html/data
+      - eclair-media:/var/www/html/media
+      - eclair-cache:/var/www/html/cache
+
+volumes:
+  eclair-data:
+  eclair-media:
+  eclair-cache:
